@@ -1,23 +1,23 @@
 package com.example.cloud.remindme;
 
-import android.app.Activity;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-/**
- * Created by Cloud on 02.09.2015.
- */
-public class MainActivity extends Activity {
+
+public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppThemeDefault);
         setContentView(R.layout.activity_main);
-        initRoolBar();
+        initToolBar();
     }
 
-    private void initRoolBar() {
+    private void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
